@@ -7,15 +7,37 @@
 
 int main() {
     printf("Super Trunfo!:\n");
+        int codigocarta, pib;
+        float populacao;
+        float area;
+        char estado[50];
+        char cidade[50];
     // Definição das variáveis para armazenar as propriedades das cidades
     // Você pode utilizar o código do primeiro desafio
 
-    
+      printf("Digite o PIB: \n");
+      scanf("%d", &pib);
+
+      printf("Digite a População: \n");
+      scanf("%f", &populacao);
+
+      printf("Digite sua Area: \n");
+      scanf("%f", &area);
+
+      printf("Digite seu Estado: \n");
+      scanf("%s", &estado);
+
+      printf("Digite o nome da Cidade: \n");
+      scanf("%s", &cidade);
+
+      printf("Digite o Código da Carta \n");
+      scanf("%d", &codigocarta);
     // Cadastro das Cartas:
     // Implemente a lógica para solicitar ao usuário que insira os dados das cidades
     // utilizando a função scanf para capturar as entradas.
     // utilize o código do primeiro desafio
-
+      printf("- População: %f \n - Código da Carta: %d \n - Cidade: %s \n - Estado: %s \n ", populacao, codigocarta, cidade, estado);
+      printf("- PIB: %d \n - Area: %f \n", pib, area);
     // Exemplo:
     // printf("Digite o código da cidade: ");
     // scanf("%s", codigo);
@@ -42,3 +64,4 @@ int main() {
 
     return 0;
 }
+
