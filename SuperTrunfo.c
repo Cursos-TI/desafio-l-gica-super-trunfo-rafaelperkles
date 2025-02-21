@@ -13,8 +13,7 @@ typedef struct {
 
 int main() {
     CartaSuperTrunfo carta1, carta2;
-
-    // Leitura dos dados da primeira carta
+    
     printf("Digite a letra do estado (A-H) da primeira carta: ");
     scanf(" %c", &carta1.estado);
     printf("Digite o código da primeira carta (ex: A01): ");
@@ -29,8 +28,7 @@ int main() {
     scanf(" %f", &carta1.pib);
     printf("Digite o número de pontos turísticos da primeira carta: ");
     scanf(" %d", &carta1.pontosTuristicos);
-
-    // Leitura dos dados da segunda carta
+    
     printf("Digite a letra do estado (A-H) da segunda carta: ");
     scanf(" %c", &carta2.estado);
     printf("Digite o código da segunda carta (ex: A01): ");
@@ -45,8 +43,7 @@ int main() {
     scanf(" %f", &carta2.pib);
     printf("Digite o número de pontos turísticos da segunda carta: ");
     scanf(" %d", &carta2.pontosTuristicos);
-
-    // Exibição dos dados da primeira carta
+    
     printf("\n--- Carta 1 ---\n");
     printf("Estado: %c\n", carta1.estado);
     printf("Código: %s\n", carta1.codigo);
@@ -55,8 +52,7 @@ int main() {
     printf("Área: %.2f km²\n", carta1.area);
     printf("PIB: %.2f bilhões\n", carta1.pib);
     printf("Pontos Turísticos: %d\n", carta1.pontosTuristicos);
-
-    // Exibição dos dados da segunda carta
+    
     printf("\n--- Carta 2 ---\n");
     printf("Estado: %c\n", carta2.estado);
     printf("Código: %s\n", carta2.codigo);
@@ -65,6 +61,14 @@ int main() {
     printf("Área: %.2f km²\n", carta2.area);
     printf("PIB: %.2f bilhões\n", carta2.pib);
     printf("Pontos Turísticos: %d\n", carta2.pontosTuristicos);
-
+    
+    if (carta1.pib > carta2.pib) {
+        printf("\nA carta vencedora é a do estado %c, cidade %s.\n", carta1.estado, carta1.nomeCidade);
+    } else if (carta2.pib > carta1.pib) {
+        printf("\nA carta vencedora é a do estado %c, cidade %s.\n", carta2.estado, carta2.nomeCidade);
+    } else {
+        printf("\nAs duas cartas possuem o mesmo PIB. Não há vencedora.\n");
+    }
+    
     return 0;
 }
